@@ -68,7 +68,7 @@ Rect2d ROIPick::select(const cv::String& windowName, Mat img){
 	if (!(key==8||key==27))
 		cout << "select a object,Done!" << endl;
 #endif
-	//destroyWindow(windowName);
+	destroyWindow(windowName);
 	return selctorParams.box;
 }
 

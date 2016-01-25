@@ -76,6 +76,17 @@ namespace cv {
     return trackerList.back()->init(image, boundingBox);
   };
 
+  bool MultiTracker::del(int num){
+	  std::vector<Rect2d>::const_iterator ito = objects.begin();
+	  std::vector<cv::Ptr<Tracker>>::const_iterator itt = trackerList.begin();
+	  itt += num;
+	  ito += num;
+	  trackerList.erase(itt);
+	  objects.erase(ito);
+	  std::cout << "del the target : " << num;
+	  return true;
+  };
+
   // add a set of objects to be tracked
   bool MultiTracker::add(const String& trackerType, const Mat& image, std::vector<Rect2d> boundingBox){
     // status of the tracker addition
@@ -101,6 +112,7 @@ namespace cv {
 
     return add(defaultAlgorithm.c_str(), image, boundingBox);
   };
+
 
   // update position of the tracked objects, the result is stored in internal storage
   bool MultiTracker::update( const Mat& image){

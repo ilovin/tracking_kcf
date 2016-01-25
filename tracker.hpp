@@ -1285,6 +1285,7 @@ public:
 	* @param boundingBox a rectangle represents ROI of the tracked object
 	*/
 	CV_WRAP bool add(const Mat& image, const Rect2d& boundingBox);
+	CV_WRAP bool del(int num);
 
 	/**
 	* \brief Add a new object to be tracked.
