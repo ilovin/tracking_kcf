@@ -31,7 +31,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	string str;
 	//str = argv[1];
 	//str = "d:/Document/class/Digital_Image/Sample/1/%5d.jpg";
-	str = "d:/Document/class/Digital_Image/Sample/step_3.wmv";
+	//str = "d:/Document/class/Digital_Image/Sample/step_1.wmv";
+	str = "d:/Document/code/tracking/CompressiveTrackingFromsequences/CompressiveTracking/data/%5d.jpg";
 	//str = "d:/tmp/demo.jpg";
 	//str = "d:/tmp/demo0.avi";
 	//Mat threshold_output;
@@ -55,6 +56,9 @@ int _tmain(int argc, _TCHAR* argv[])
 
 	cap >> frame;
 	limit_area = pickROI(frame);//[266 x 89 from (81, 64)]
+	cout << limit_area << endl;
+	cin.get();
+	return 0;
 	//limit_area = Rect2d(81, 64, 266, 89);
 	namedWindow("findcontours");
 	//namedWindow("org");

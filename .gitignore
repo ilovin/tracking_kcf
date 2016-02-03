@@ -30,6 +30,7 @@
 # others
 *.jpg
 Debug/
+Release/
 x64/
 *.bmp
 *.png
